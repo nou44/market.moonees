@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moonees Market</title>
+
+<link rel="stylesheet" href="market.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+
+<header class="market-hero">
+  <div class="hero-inner">
+
+    <img src="data/nfts/Moonees.png" class="hero-logo" alt="Moonees">
+
+    <div class="hero-text">
+      <h1>Moonees NFT Collection</h1>
+      <p>Discover & Mint your MoonEee</p>
+      <div class="hero-action">
+        <button class="hero-order-btn" onclick="openOrder()">Order Free</button>
+        <div class="order-overlay" id="orderOverlay"></div>
+
+<div class="order-box" id="orderBox">
+
+  <div class="order-field">
+    <input type="email" id="email" placeholder="Your email">
+    <img id="emailIcon" class="status-icon">
+  </div>
+
+  <div class="order-field">
+    <input type="text" id="promo" placeholder="Promo code">
+    <img id="promoIcon" class="status-icon">
+  </div>
+
+  <button class="confirm-order" id="confirmBtn" disabled>Confirm</button>
+
+</div>
+
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ===== ORDER POPUP ===== -->
+<div class="order-popup" id="orderPopup">
+
+  <div class="order-box">
+
+    <h2>Order For Free</h2>
+
+    <div class="input-group">
+      <input type="email" id="orderEmail" placeholder="Enter your email">
+      <span class="status-icon" id="emailStatus"></span>
+    </div>
+
+    <div class="input-group">
+      <input type="text" id="promoCode" placeholder="Enter promo code">
+      <span class="status-icon" id="promoStatus"></span>
+    </div>
+
+    <button class="confirm-btn" id="confirmBtn" disabled>Confirm</button>
+
+    <button class="close-btn" onclick="closeOrder()">Back</button>
+
+  </div>
+
+</div>
+<!-- ======================= -->
+
+<section class="market-grid" id="marketGrid"></section>
+
+<footer class="footer-section">
+  <div class="footer-container">
+      <div class="footer-logo">
+          <img src="data/nfts/Moonees.png" alt="Group Logo" class="logo-img">
+      </div>
+      <div class="footer-info">
+          <p>&copy; 2025 Moonees. All Rights Reserved.</p>
+          <p>Website Designed by <span>Halvin nakamoto</span></p>
+      </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="market.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+   emailjs.init("OP5t40PkqQoQolPgJ");
+})();
+</script>
+<script src="market.js"></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0c1326;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+
+}
+
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60vh;
+  width: 100%;
+  z-index: -1;
+}
+#bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+
+/* HERO */
+
+.market-hero{
+  width:100%;
+  position:relative;
+  z-index:5;
+  padding:15px 30px;
+}
+
+.hero-inner{
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* Logo */
+.hero-logo{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+}
+
+/* Text */
+.hero-text{
+  flex:1;
+  text-align:center;
+  position: relative;
+  right: 50px;
+}
+.hero-action{
+  display:flex;
+  justify-content:flex-end;
+  position: relative;
+  bottom: 50px;
+  left: 10px;
+}
+
+.hero-text h1{
+  font-size:3.3rem;
+  color:#fff;
+  font-family:'Chewy', cursive;
+}
+
+.hero-text p{
+  font-size:.9rem;
+  color:#ffb347;
+}
+
+/* Button */
+.hero-order-btn{
+  background:transparent;
+  color:#ff8c00;
+  border:2px solid #ff8c00;
+  padding:8px 20px;
+  border-radius:22px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.3s;
+  box-shadow:0 0 12px rgba(255,140,0,.6);
+}
+
+.hero-order-btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 25px rgba(255,170,80,1);
+}
+@media(max-width:700px){
+
+  .hero-inner{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .hero-text h1{ 
+    font-size:1rem; 
+    position: relative;
+    left: 45px;
+    bottom: 40px;
+}
+  .hero-text p{
+     font-size:.75rem;
+    position: relative;
+    left: 45px;
+    bottom: 35px;
+    }
+
+  .hero-order-btn{
+    padding:7px 18px;
+    font-size:.8rem;
+  }
+}
+@media(max-width:700px){
+  .hero-action{
+    justify-content:center;
+    position: relative;
+    top: 0;
+    left: 50px;
+  }
+}
+
+
+/* GRID */
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  padding: 20px;
+}
+
+/* CARD */
+
+.nft-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  padding: 14px;
+  backdrop-filter: blur(6px);
+  transition: 0.4s;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+.nft-card:hover {
+  transform: translateY(-8px);
+}
+
+/* MEDIA */
+
+.media-box {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.media-box img,
+.media-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.media-box video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.nft-card:hover video {
+  opacity: 1;
+}
+
+/* INFO */
+
+.nft-info {
+  margin-top: 10px;
+}
+
+.nft-info h3 {
+  font-size: 1rem;
+}
+
+.nft-info span {
+  color: #ffcc00;
+  font-size: 0.9rem;
+}
+
+.mint-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #ffcc00;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* MOBILE */
+@media(max-width: 768px){
+
+  .market-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 15px;
+  }
+
+  .media-box{
+    height: 160px;
+  }
+
+  .nft-info h3{
+    font-size: 0.9rem;
+  }
+
+  .nft-info span{
+    font-size: 0.8rem;
+  }
+
+  .mint-btn{
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+}
+
+@media(max-width: 600px) {
+  .market-hero h1 { font-size: 2rem; }
+  .market-grid { padding: 20px; }
+}
+
+  .footer-section {
+  
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards; /* تفعيل الأنيميشن عند الوصول */
+}
+
+.footer-section.active {
+    opacity: 1;
+    animation: fadeIn 1s ease-out forwards; /* التأثير يظهر مرة أخرى عند الوصول */
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+    animation: logoFadeIn 1.5s ease-out;
+}
+
+.footer-info {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-info span {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.order-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  display:none;
+  z-index:99;
+}
+
+.order-box{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:rgba(20,20,20,.85);
+  backdrop-filter:blur(18px);
+  padding:30px;
+  border-radius:20px;
+  width:min(340px,90%);
+  display:none;
+  z-index:100;
+  animation:pop .4s ease;
+  color:white;
+  text-align:center;
+}
+
+@keyframes pop{
+  from{scale:.7;opacity:0}
+  to{scale:1;opacity:1}
+}
+
+.order-field{
+  position:relative;
+  margin-bottom:18px;
+}
+
+.order-field input{
+  width:100%;
+  padding:12px 45px 12px 15px;
+  border-radius:30px;
+  border:1px solid #555;
+  background:#0d0d0d;
+  color:white;
+  font-size:15px;
+}
+
+.status-icon{
+  width:22px;
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  display:none;
+}
+
+.order-hint{
+  font-size:12px;
+  margin-top:4px;
+  display:none;
+}
+
+.confirm-order{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.confirm-order:disabled{
+  opacity:.5;
+  cursor:not-allowed;
+}
+.confirm-order.success {
+  background: #1ecb6b;
+  color: #fff;
+}
+
+.success-message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #1ecb6b;
+  animation: fadeIn .5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
