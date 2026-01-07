@@ -413,7 +413,7 @@ canvas#bg {
     width: 50px;
     position: fixed;
     top: 45%;
-    left: -25px;
+    left: -15px;
     transform: translateY(-50%);
     z-index: 1;
 }
