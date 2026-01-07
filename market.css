@@ -64,6 +64,7 @@ canvas#bg {
   text-align:center;
   position: relative;
   right: 50px;
+   font-family: "Roboto", sans-serif;
 }
 .hero-action{
   display:flex;
@@ -216,8 +217,10 @@ canvas#bg {
   padding: 10px;
   border: none;
   border-radius: 8px;
-  background: #ffcc00;
-  color: #000;
+  background: transparent;
+   border:2px solid #ff8c00;
+  padding:8px 16px;
+  color: #ff8c00;
   cursor: pointer;
   font-weight: bold;
 }
