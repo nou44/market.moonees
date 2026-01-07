@@ -51,8 +51,8 @@ canvas#bg {
 
 /* Logo */
 .hero-logo{
-  width:150px;
-  height:150px;
+  width:120px;
+  height:120px;
   border-radius:50%;
 }
 
@@ -270,7 +270,7 @@ canvas#bg {
 }
 
 .footer-logo img {
-    width: 150px;
+    width: 120px;
     animation: logoFadeIn 1.5s ease-out;
 }
 
