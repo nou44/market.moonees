@@ -119,8 +119,8 @@
     "video": "data/nfts/25.mp4"
   },
    {
-    "id": 17,
-    "name": "Pinks-Arms Q001 #17",
+    "id": 44,
+    "name": "Pinks-Arms Q001 #44",
     "price": 220,
     "image": "data/nfts/16.png",
     "video": "data/nfts/16.mp4"
@@ -166,7 +166,69 @@
     "price": 220,
     "image": "data/nfts/26.png",
     "video": "data/nfts/26.mp4"
+  },
+  {
+    "id": 24,
+    "name": "Nick-Arms MP99 #24",
+    "price": 220,
+    "image": "data/nfts/24.png",
+    "video": "data/nfts/26.mp4"
+  },
+    {
+    "id": 23,
+    "name": "KHabe-Arms MQ07 #23",
+    "price": 220,
+    "image": "data/nfts/41.png",
+    "video": "data/nfts/41.mp4"
+  },
+    {
+    "id": 24,
+    "name": "Fizer-Arms M007 #24",
+    "price": 220,
+    "image": "data/nfts/27.png",
+    "video": "data/nfts/27.mp4"
+  },
+    {
+    "id": 25,
+    "name": "blans-Arms M007 #25",
+    "price": 220,
+    "image": "data/nfts/40.png",
+    "video": "data/nfts/40.mp4"
+  },
+    {
+    "id": 26,
+    "name": "Mily-Arms Se07 #26",
+    "price": 220,
+    "image": "data/nfts/33.png",
+    "video": "data/nfts/33.mp4"
+  },
+    {
+    "id": 27,
+    "name": "-Arms MP97 #27",
+    "price": 220,
+    "image": "data/nfts/38.png",
+    "video": "data/nfts/38.mp4"
+  },
+   {
+    "id": 28,
+    "name": "-Arms MP97 #28",
+    "price": 220,
+    "image": "data/nfts/53.png",
+    "video": "data/nfts/53.mp4"
+  },
+   {
+    "id": 29,
+    "name": "-Arms MP97 #29",
+    "price": 220,
+    "image": "data/nfts/52.png",
+    "video": "data/nfts/52.mp4"
+  },
+   {
+    "id": 30,
+    "name": "-Arms MP97 #30",
+    "price": 220,
+    "image": "data/nfts/51.png",
+    "video": "data/nfts/51.mp4"
   }
-
 ]
 
