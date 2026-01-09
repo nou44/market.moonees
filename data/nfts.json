@@ -229,6 +229,27 @@
     "price": 220,
     "image": "data/nfts/51.png",
     "video": "data/nfts/51.mp4"
+  },
+   {
+    "id": 33,
+    "name": "Patch-Arms QW00 #33",
+    "price": 220,
+    "image": "data/nfts/28.png",
+    "video": "data/nfts/28.mp4"
+  },
+   {
+    "id": 34,
+    "name": "Organet-Swoerds SV #34",
+    "price": 220,
+    "image": "data/nfts/10.png",
+    "video": "data/nfts/10.mp4"
+  },
+   {
+    "id": 35,
+    "name": "Casa-Arms MP12 #35",
+    "price": 220,
+    "image": "data/nfts/29.png",
+    "video": "data/nfts/29.mp4"
   }
 ]
 
