@@ -250,6 +250,48 @@
     "price": 220,
     "image": "data/nfts/29.png",
     "video": "data/nfts/29.mp4"
+  },
+   {
+    "id": 36,
+    "name": "Croze-Arms MP12 #36",
+    "price": 220,
+    "image": "data/nfts/34.png",
+    "video": "data/nfts/34.mp4"
+  },
+   {
+    "id": 37,
+    "name": "Kayo-Arms MP12 #37",
+    "price": 220,
+    "image": "data/nfts/35.png",
+    "video": "data/nfts/35.mp4"
+  },
+   {
+    "id": 38,
+    "name": "Csawn-Arms MP12 #38",
+    "price": 220,
+    "image": "data/nfts/67.png",
+    "video": "data/nfts/67.mp4"
+  },
+   {
+    "id": 39,
+    "name": "Eisel-Arms MP12 #39",
+    "price": 220,
+    "image": "data/nfts/69.png",
+    "video": "data/nfts/69.mp4"
+  },
+   {
+    "id": 40,
+    "name": "Binan-Arms MP12 #40",
+    "price": 220,
+    "image": "data/nfts/66.png",
+    "video": "data/nfts/66.mp4"
+  },
+   {
+    "id": 41,
+    "name": "Casa-Arms MP12 #41",
+    "price": 220,
+    "image": "data/nfts/40.png",
+    "video": "data/nfts/40.mp4"
   }
 ]
 
