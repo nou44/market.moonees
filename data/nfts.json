@@ -292,6 +292,20 @@
     "price": 220,
     "image": "data/nfts/40.png",
     "video": "data/nfts/40.mp4"
+  },
+   {
+    "id": 42,
+    "name": "Speed-Arms MP12 #42",
+    "price": 220,
+    "image": "data/nfts/70.png",
+    "video": "data/nfts/70.mp4"
+  },
+   {
+    "id": 43,
+    "name": "Carli-Arms MP12 #43",
+    "price": 220,
+    "image": "data/nfts/71.png",
+    "video": "data/nfts/71.mp4"
   }
 ]
 
