@@ -1,23 +1,12 @@
+console.log("Market JS Loaded");
+
 const CONTRACT_ADDRESS = "0x8164214b395b68Bc2BAe5F38728E7c790066E7b8";
-const ABI = [
-  "function mint(string uri) payable"
-];
 
-let provider, signer, contract;
-
-async function connectWallet(){
-  provider = new ethers.providers.Web3Provider(window.ethereum);
-  await provider.send("eth_requestAccounts", []);
-  signer = provider.getSigner();
-  contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
-}
-
-connectWallet();
+const grid = document.getElementById("marketGrid");
 
 fetch("data/nfts.json")
   .then(res => res.json())
   .then(nfts => {
-
     nfts.forEach(nft => {
 
       const card = document.createElement("div");
@@ -26,44 +15,24 @@ fetch("data/nfts.json")
       card.innerHTML = `
         <div class="media-box">
           <img src="${nft.image}">
-          <video src="${nft.video}" muted loop></video>
+          <video src="${nft.video}" muted loop playsinline></video>
         </div>
         <div class="nft-info">
-          <h3>${nft.name} #${nft.id}</h3>
-          <span>Price: 200 POL</span>
+          <h3>${nft.name}</h3>
+          <span>Price: ${nft.price} POL</span>
           <button class="mint-btn" data-id="${nft.id}">Mint</button>
         </div>
       `;
 
       const video = card.querySelector("video");
-      const mintBtn = card.querySelector(".mint-btn");
 
       card.addEventListener("mouseenter", () => video.play());
       card.addEventListener("mouseleave", () => video.pause());
 
-      mintBtn.onclick = async () => {
-        try {
-          const uri = `https://market.moonees.org/metadata/${nft.id}.json`;
-
-          const tx = await contract.mint(uri, {
-            value: ethers.utils.parseEther("200")
-          });
-
-          mintBtn.innerText = "Minting...";
-          await tx.wait();
-          mintBtn.innerText = "Minted ✔";
-
-        } catch (err) {
-          console.error(err);
-          alert("Mint failed");
-        }
-      };
-
       grid.appendChild(card);
-
     });
-
-  });
+  })
+  .catch(err => console.error(err));
 
 const scene = new THREE.Scene();
 
