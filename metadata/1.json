@@ -1,8 +1,8 @@
 {
   "name": "Greed-Arms MP12 #1",
   "description": "Moonees Genesis Collection. Unique warrior from GRIDER tribe.",
-  "image": "https://market.moonees.org/metadata/nfts/1.png",
-  "animation_url": "https://market.moonees.org/metadata/nfts/1.mp4",
+  "image": "https://market.moonees.org/data/nfts/1.png",
+
   "attributes": [
     { "trait_type": "Tribe", "value": "GRIDER" },
     { "trait_type": "Category", "value": "Arms" },
