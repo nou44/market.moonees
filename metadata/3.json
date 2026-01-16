@@ -1,0 +1,11 @@
+{
+  "name": "Monor-Swords Sk09 #3",
+  "description": "Moonees Genesis Collection. Unique warrior from MOONS tribe.",
+  "image": "https://market.moonees.org/data/nfts/3.png",
+  "animation_url": "https://market.moonees.org/data/nfts/3.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "MOONS" },
+    { "trait_type": "Category", "value": "Swords" },
+    { "trait_type": "Level", "value": "40" }
+  ]
+}
