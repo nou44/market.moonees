@@ -1,0 +1,11 @@
+{
+  "name": "Grows-Swords Mk09 #2",
+  "description": "Moonees Genesis Collection. Unique warrior from GRIDER tribe.",
+  "image": "https://market.moonees.org/data/nfts/1.png",
+  "animation_url": "https://market.moonees.org/data/nfts/1.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "GRIDER" },
+    { "trait_type": "Category", "value": "Swords" },
+    { "trait_type": "Level", "value": "111" }
+  ]
+}
