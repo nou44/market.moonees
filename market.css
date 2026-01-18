@@ -211,30 +211,22 @@ canvas#bg {
   font-size: 0.9rem;
 }
 
-
 .mint-btn {
-  position: absolute;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 22px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
   border: none;
-  border-radius: 20px;
-  background: linear-gradient(135deg,#00ffd5,#00aaff);
-  color: black;
-  font-weight: bold;
+  border-radius: 8px;
+  background: transparent;
+   border:1px solid #ff8c00;
+  padding:8px 16px;
+  color: #ff8c00;
   cursor: pointer;
-  transition: .3s;
-  z-index: 5;
+  font-weight: bold;
 }
-
-.mint-btn:hover {
-  transform: translateX(-50%) scale(1.1);
-}
-
-.mint-btn:disabled {
-  opacity: .6;
-  cursor: not-allowed;
+.mint-btn:hover{
+    transform:scale(1.08);
+  box-shadow:0 0 25px rgba(255,170,80,1);
 }
 /* MOBILE */
 @media(max-width: 768px){
