@@ -1,3 +1,5 @@
+console.log("Market Loaded");
+
 const CONTRACT_ADDRESS = "0x971d1B0161f725810652a2c9FDc77Ba5118258A4";
 
 const ABI = [
@@ -7,35 +9,53 @@ const ABI = [
 document.getElementById("globalMintBtn").onclick = async () => {
   try {
     if (!window.ethereum) {
-      alert("Install a wallet like MetaMask");
+      alert("Install a wallet");
       return;
     }
 
+    await ethereum.request({ method: "eth_requestAccounts" });
+
     const provider = new ethers.BrowserProvider(window.ethereum);
-    await provider.send("eth_requestAccounts", []);
-
     const signer = await provider.getSigner();
-    const network = await provider.getNetwork();
 
-    if (network.chainId !== 137n) {
-      alert("Switch to Polygon Mainnet");
+    const network = await provider.getNetwork();
+    if (network.chainId != 137n) {
+      alert("Switch to Polygon");
       return;
     }
 
     const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
 
-    const price = await contract.mintPrice();
+    const price = ethers.parseEther("15"); // 15 POL
 
     const tx = await contract.mint({ value: price });
     await tx.wait();
 
-    alert("Mint Success ✅");
+    alert("Mint Success 🚀");
 
   } catch (err) {
-    console.error(err);
+    console.log(err);
     alert("Mint Failed");
   }
 };
+fetch("data/nfts.json")
+  .then(res => res.json())
+  .then(nfts => {
+    nfts.forEach(nft => {
+      const card = document.createElement("div");
+      card.className = "nft-card";
+      card.innerHTML = `
+        <div class="media-box">
+          <img src="${nft.image}">
+          <video src="${nft.video}" muted loop></video>
+        </div>
+        <div class="nft-info">
+          <h3>${nft.name}</h3>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  });
 
 
 
