@@ -1,3 +1,5 @@
+
+
 console.log("Market JS Loaded");
 
 const CONTRACT_ADDRESS = "0x971d1B0161f725810652a2c9FDc77Ba5118258A4";
@@ -35,36 +37,36 @@ fetch("data/nfts.json")
       card.addEventListener("mouseleave", () => video.pause());
 
       const mintBtn = card.querySelector(".mint-btn");
+mintBtn.onclick = async () => {
+  try {
+    if (typeof window.ethereum === "undefined") {
+      alert("Open site in wallet browser ل MetaMask / Trust / OKX");
+      window.open("https://metamask.app.link/dapp/market.moonees.org", "_blank");
+      return;
+    }
 
-      mintBtn.onclick = async () => {
-        try {
-          if (!window.ethereum) {
-            alert("Install MetaMask");
-            return;
-          }
+    await window.ethereum.request({ method: "eth_requestAccounts" });
 
-          await ethereum.request({ method: "eth_requestAccounts" });
+    const provider = new ethers.BrowserProvider(window.ethereum);
+    const signer = await provider.getSigner();
+    const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
 
-          const provider = new ethers.BrowserProvider(window.ethereum);
-          const signer = await provider.getSigner();
-          const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
+    const price = await contract.mintPrice();
 
-          const price = await contract.mintPrice();
+    mintBtn.innerText = "Minting...";
+    mintBtn.disabled = true;
 
-          mintBtn.innerText = "Minting...";
-          mintBtn.disabled = true;
+    const tx = await contract.mint({ value: price });
+    await tx.wait();
 
-          const tx = await contract.mint({ value: price });
-          await tx.wait();
-
-          mintBtn.innerText = "Minted ✅";
-        } catch (err) {
-          console.error(err);
-          alert("Mint failed");
-          mintBtn.innerText = "Mint";
-          mintBtn.disabled = false;
-        }
-      };
+    mintBtn.innerText = "Minted ✅";
+  } catch (err) {
+    console.error(err);
+    alert(err.reason || err.message || "Mint failed");
+    mintBtn.innerText = "Mint";
+    mintBtn.disabled = false;
+  }
+};
 
       grid.appendChild(card);
     });
