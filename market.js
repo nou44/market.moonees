@@ -1,16 +1,42 @@
-
-
 console.log("Market JS Loaded");
 
-const CONTRACT_ADDRESS = "0x971d1B0161f725810652a2c9FDc77Ba5118258A4";
+// ================= CONFIG =================
+const CONTRACT_ADDRESS = "0x8164214b395b68Bc2BAe5F38728E7c790066E7b8";
 
 const ABI = [
   "function mint() payable",
-  "function mintPrice() view returns(uint256)"
+  "function mintPrice() view returns (uint256)",
+  "function totalMinted() view returns (uint256)",
+  "function MAX_SUPPLY() view returns (uint256)"
 ];
+// =========================================
 
 const grid = document.getElementById("marketGrid");
 
+// ---------- Polygon Switch ----------
+async function switchToPolygon() {
+  try {
+    await window.ethereum.request({
+      method: "wallet_switchEthereumChain",
+      params: [{ chainId: "0x89" }]
+    });
+  } catch (e) {
+    if (e.code === 4902) {
+      await window.ethereum.request({
+        method: "wallet_addEthereumChain",
+        params: [{
+          chainId: "0x89",
+          chainName: "Polygon Mainnet",
+          rpcUrls: ["https://polygon-rpc.com"],
+          nativeCurrency: { name: "POL", symbol: "POL", decimals: 18 },
+          blockExplorerUrls: ["https://polygonscan.com"]
+        }]
+      });
+    }
+  }
+}
+
+// ---------- Load Market ----------
 fetch("data/nfts.json")
   .then(res => res.json())
   .then(nfts => {
@@ -23,55 +49,62 @@ fetch("data/nfts.json")
         <div class="media-box">
           <img src="${nft.image}">
           <video src="${nft.video}" muted loop playsinline></video>
+
+          <button class="mint-btn" data-id="${nft.id}">
+            Mint
+          </button>
         </div>
+
         <div class="nft-info">
           <h3>${nft.name}</h3>
           <span>Price: ${nft.price} POL</span>
-          <button class="mint-btn" data-id="${nft.id}">Mint</button>
         </div>
       `;
 
       const video = card.querySelector("video");
+      const mintBtn = card.querySelector(".mint-btn");
 
       card.addEventListener("mouseenter", () => video.play());
       card.addEventListener("mouseleave", () => video.pause());
 
-      const mintBtn = card.querySelector(".mint-btn");
-mintBtn.onclick = async () => {
-  try {
-    if (typeof window.ethereum === "undefined") {
-      alert("Open site in wallet browser ل MetaMask / Trust / OKX");
-      window.open("https://metamask.app.link/dapp/market.moonees.org", "_blank");
-      return;
-    }
+      // ---------- Mint Logic ----------
+      mintBtn.onclick = async () => {
+        try {
+          if (!window.ethereum) {
+            alert("دخل للموقع من داخل wallet browser");
+            return;
+          }
 
-    await window.ethereum.request({ method: "eth_requestAccounts" });
+          await window.ethereum.request({ method: "eth_requestAccounts" });
+          await switchToPolygon();
 
-    const provider = new ethers.BrowserProvider(window.ethereum);
-    const signer = await provider.getSigner();
-    const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
+          const provider = new ethers.BrowserProvider(window.ethereum);
+          const signer = await provider.getSigner();
+          const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
 
-    const price = await contract.mintPrice();
+          const price = await contract.mintPrice();
 
-    mintBtn.innerText = "Minting...";
-    mintBtn.disabled = true;
+          mintBtn.innerText = "Minting...";
+          mintBtn.disabled = true;
 
-    const tx = await contract.mint({ value: price });
-    await tx.wait();
+          const tx = await contract.mint({ value: price });
+          await tx.wait();
 
-    mintBtn.innerText = "Minted ✅";
-  } catch (err) {
-    console.error(err);
-    alert(err.reason || err.message || "Mint failed");
-    mintBtn.innerText = "Mint";
-    mintBtn.disabled = false;
-  }
-};
+          mintBtn.innerText = "Minted ✅";
+
+        } catch (err) {
+          console.error(err);
+          alert(err.reason || err.message || "Mint failed");
+          mintBtn.innerText = "Mint";
+          mintBtn.disabled = false;
+        }
+      };
 
       grid.appendChild(card);
     });
   })
   .catch(err => console.error(err));
+
 
 const scene = new THREE.Scene();
 
