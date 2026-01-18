@@ -1,0 +1,13 @@
+{
+  "name": "Hamble #29",
+  "description": "Moonees Genesis Collection. Hamble is a unique warrior from the PURLAB tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/38.png",
+  "animation_url": "https://market.moonees.org/data/nfts/38.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "PURLABE" },
+    { "trait_type": "Weapon", "value": "Swords" },
+    { "trait_type": "Color", "value": "Green" },
+    { "trait_type": "Level", "value": 1000 },
+    { "trait_type": "Type-Weapon", "value": "SH0011" }
+  ]
+}

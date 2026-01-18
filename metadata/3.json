@@ -1,11 +1,13 @@
 {
-  "name": "Monor-Swords Sk09 #3",
-  "description": "Moonees Genesis Collection. Unique warrior from MOONS tribe.",
+  "name": "Monor #3",
+  "description": "Moonees Genesis Collection. Monor is a unique warrior from the MOONS tribe, forged for battle in the Moonees universe.",
   "image": "https://market.moonees.org/data/nfts/3.png",
   "animation_url": "https://market.moonees.org/data/nfts/3.mp4",
   "attributes": [
     { "trait_type": "Tribe", "value": "MOONS" },
-    { "trait_type": "Category", "value": "Swords" },
-    { "trait_type": "Level", "value": "40" }
+    { "trait_type": "Weapon", "value": "Swords" },
+    { "trait_type": "Color", "value": "Gry" },
+    { "trait_type": "Level", "value": 97 },
+    { "trait_type": "Type-Weapon", "value": "AS2000" }
   ]
 }

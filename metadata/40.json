@@ -1,0 +1,13 @@
+{
+  "name": "Pinaan #40",
+  "description": "Moonees Genesis Collection. Pinaan is a unique warrior from the PURABLE tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/66.png",
+  "animation_url": "https://market.moonees.org/data/nfts/66.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "PURABLE" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Purple" },
+    { "trait_type": "Level", "value": 56 },
+    { "trait_type": "Type-Weapon", "value": "XR" }
+  ]
+}

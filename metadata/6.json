@@ -1,0 +1,13 @@
+{
+  "name": "punoke #6",
+  "description": "Moonees Genesis Collection. Punoke is a unique warrior from the BLOD tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/6.png",
+  "animation_url": "https://market.moonees.org/data/nfts/6.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "BLOD" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Blue" },
+    { "trait_type": "Level", "value": 12 },
+    { "trait_type": "Type-Weapon", "value": "OU55" }
+  ]
+}

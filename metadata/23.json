@@ -1,0 +1,13 @@
+{
+  "name": "Block #23",
+  "description": "Moonees Genesis Collection. Block is a unique warrior from the BLOD tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/21.png",
+  "animation_url": "https://market.moonees.org/data/nfts/21.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "BLOD" },
+    { "trait_type": "Weapon", "value": "Swords" },
+    { "trait_type": "Color", "value": "Blue" },
+    { "trait_type": "Level", "value": 712 },
+    { "trait_type": "Type-Weapon", "value": "SIL44" }
+  ]
+}

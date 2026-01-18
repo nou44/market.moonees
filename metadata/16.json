@@ -1,0 +1,13 @@
+{
+  "name": "Ganet #16",
+  "description": "Moonees Genesis Collection. Ganet is a unique warrior from the ORGANET tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/24.png",
+  "animation_url": "https://market.moonees.org/data/nfts/24.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "ORGANET" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Orange" },
+    { "trait_type": "Level", "value": 89 },
+    { "trait_type": "Type-Weapon", "value": "CAE2" }
+  ]
+}

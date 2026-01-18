@@ -1,6 +1,11 @@
 console.log("Market JS Loaded");
 
-const CONTRACT_ADDRESS = "0x8164214b395b68Bc2BAe5F38728E7c790066E7b8";
+const CONTRACT_ADDRESS = "0x971d1B0161f725810652a2c9FDc77Ba5118258A4";
+
+const ABI = [
+  "function mint() payable",
+  "function mintPrice() view returns(uint256)"
+];
 
 const grid = document.getElementById("marketGrid");
 
@@ -28,6 +33,38 @@ fetch("data/nfts.json")
 
       card.addEventListener("mouseenter", () => video.play());
       card.addEventListener("mouseleave", () => video.pause());
+
+      const mintBtn = card.querySelector(".mint-btn");
+
+      mintBtn.onclick = async () => {
+        try {
+          if (!window.ethereum) {
+            alert("Install MetaMask");
+            return;
+          }
+
+          await ethereum.request({ method: "eth_requestAccounts" });
+
+          const provider = new ethers.BrowserProvider(window.ethereum);
+          const signer = await provider.getSigner();
+          const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
+
+          const price = await contract.mintPrice();
+
+          mintBtn.innerText = "Minting...";
+          mintBtn.disabled = true;
+
+          const tx = await contract.mint({ value: price });
+          await tx.wait();
+
+          mintBtn.innerText = "Minted ✅";
+        } catch (err) {
+          console.error(err);
+          alert("Mint failed");
+          mintBtn.innerText = "Mint";
+          mintBtn.disabled = false;
+        }
+      };
 
       grid.appendChild(card);
     });

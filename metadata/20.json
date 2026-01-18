@@ -1,0 +1,13 @@
+{
+  "name": "Diaz #20",
+  "description": "Moonees Genesis Collection. Diaz is a unique warrior from the WAHKCH tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/18.png",
+  "animation_url": "https://market.moonees.org/data/nfts/18.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "WAHKCH" },
+    { "trait_type": "Weapon", "value": "Swords" },
+    { "trait_type": "Color", "value": "White" },
+    { "trait_type": "Level", "value": 345 },
+    { "trait_type": "Type-Weapon", "value": "SW33" }
+  ]
+}

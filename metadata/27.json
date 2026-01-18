@@ -1,0 +1,13 @@
+{
+  "name": "Blance #27",
+  "description": "Moonees Genesis Collection. Blance is a unique warrior from the BLOD tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/40.png",
+  "animation_url": "https://market.moonees.org/data/nfts/40.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "BLOD" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Blue" },
+    { "trait_type": "Level", "value": 90 },
+    { "trait_type": "Type-Weapon", "value": "AK011" }
+  ]
+}

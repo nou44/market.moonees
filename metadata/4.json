@@ -1,11 +1,13 @@
 {
-  "name": "Yezo-Arms k0019 #4",
-  "description": "Moonees Genesis Collection. Unique warrior from YELLOWS tribe.",
+  "name": "Yezo #4",
+  "description": "Moonees Genesis Collection. Yezo is a unique warrior from the YELLOWS tribe, forged for battle in the Moonees universe.",
   "image": "https://market.moonees.org/data/nfts/4.png",
   "animation_url": "https://market.moonees.org/data/nfts/4.mp4",
   "attributes": [
     { "trait_type": "Tribe", "value": "YELLOWS" },
-    { "trait_type": "Category", "value": "Arms" },
-    { "trait_type": "Level", "value": "112" }
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Yellow" },
+    { "trait_type": "Level", "value": 212 },
+    { "trait_type": "Type-Weapon", "value": "40HQ" }
   ]
 }

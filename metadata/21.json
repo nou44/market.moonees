@@ -1,0 +1,13 @@
+{
+  "name": "Keeps #21",
+  "description": "Moonees Genesis Collection. Keeps is a unique warrior from the WAHKCH tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/19.png",
+  "animation_url": "https://market.moonees.org/data/nfts/19.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "WAHKCH" },
+    { "trait_type": "Weapon", "value": "Swords" },
+    { "trait_type": "Color", "value": "Whhite" },
+    { "trait_type": "Level", "value": 133 },
+    { "trait_type": "Type-Weapon", "value": "SW03" }
+  ]
+}

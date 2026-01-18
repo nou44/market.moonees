@@ -1,0 +1,13 @@
+{
+  "name": "Speed #42",
+  "description": "Moonees Genesis Collection. Speed is a unique warrior from the RONGS tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/70.png",
+  "animation_url": "https://market.moonees.org/data/nfts/70.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "RONGS" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Red" },
+    { "trait_type": "Level", "value": 60 },
+    { "trait_type": "Type-Weapon", "value": "SP10W" }
+  ]
+}

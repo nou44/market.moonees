@@ -1,0 +1,13 @@
+{
+  "name": "Paula #19",
+  "description": "Moonees Genesis Collection. Paula is a unique warrior from the PINKS tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/17.png",
+  "animation_url": "https://market.moonees.org/data/nfts/17.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "PINKS" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Pink" },
+    { "trait_type": "Level", "value": 209 },
+    { "trait_type": "Type-Weapon", "value": "MP1000" }
+  ]
+}

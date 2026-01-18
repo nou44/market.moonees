@@ -1,0 +1,13 @@
+{
+  "name": "Oleeg #34",
+  "description": "Moonees Genesis Collection. Oleeg is a unique warrior from the ORGANET tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/10.png",
+  "animation_url": "https://market.moonees.org/data/nfts/10.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "ORGANET" },
+    { "trait_type": "Weapon", "value": "Swords" },
+    { "trait_type": "Color", "value": "Orange" },
+    { "trait_type": "Level", "value": 211 },
+    { "trait_type": "Type-Weapon", "value": "SW09" }
+  ]
+}

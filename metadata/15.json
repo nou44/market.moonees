@@ -1,0 +1,13 @@
+{
+  "name": "Lilgot #15",
+  "description": "Moonees Genesis Collection. Lilgot is a unique warrior from the YELLOWS tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/23.png",
+  "animation_url": "https://market.moonees.org/data/nfts/23.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "YELLOWS" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Yellow" },
+    { "trait_type": "Level", "value": 140 },
+    { "trait_type": "Type-Weapon", "value": "MP5" }
+  ]
+}

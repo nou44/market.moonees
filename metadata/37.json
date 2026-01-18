@@ -1,0 +1,13 @@
+{
+  "name": "Kaya #37",
+  "description": "Moonees Genesis Collection. Kaya is a unique warrior from the PINKS tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/35.png",
+  "animation_url": "https://market.moonees.org/data/nfts/35.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "PINKS" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Pink" },
+    { "trait_type": "Level", "value": 902 },
+    { "trait_type": "Type-Weapon", "value": "AC45" }
+  ]
+}

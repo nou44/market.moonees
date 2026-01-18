@@ -1,0 +1,13 @@
+{
+  "name": "Carli #1",
+  "description": "Moonees Genesis Collection. Carli is a unique warrior from the YELLOWS tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/71.png",
+  "animation_url": "https://market.moonees.org/data/nfts/71.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "YELLOWS" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Yellow" },
+    { "trait_type": "Level", "value": 908 },
+    { "trait_type": "Type-Weapon", "value": "FIRE1X" }
+  ]
+}

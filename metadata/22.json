@@ -1,0 +1,13 @@
+{
+  "name": "Randez #22",
+  "description": "Moonees Genesis Collection. Randez is a unique warrior from the RONGS tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/14.png",
+  "animation_url": "https://market.moonees.org/data/nfts/14.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "RONGS" },
+    { "trait_type": "Weapon", "value": "Swords" },
+    { "trait_type": "Color", "value": "Red" },
+    { "trait_type": "Level", "value": 432 },
+    { "trait_type": "Type-Weapon", "value": "HEL22" }
+  ]
+}

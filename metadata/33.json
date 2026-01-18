@@ -1,0 +1,13 @@
+{
+  "name": "Patch #33",
+  "description": "Moonees Genesis Collection. Patch is a unique warrior from the PURLABE tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/28.png",
+  "animation_url": "https://market.moonees.org/data/nfts/28.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "PURLABE" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Purple" },
+    { "trait_type": "Level", "value": 105 },
+    { "trait_type": "Type-Weapon", "value": "LX01" }
+  ]
+}

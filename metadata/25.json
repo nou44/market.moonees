@@ -1,0 +1,13 @@
+{
+  "name": "Khaber #25",
+  "description": "Moonees Genesis Collection. Khaber is a unique warrior from the ORGANET tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/32.png",
+  "animation_url": "https://market.moonees.org/data/nfts/32.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "ORGANET" },
+    { "trait_type": "Weapon", "value": "Swords" },
+    { "trait_type": "Color", "value": "Orange" },
+    { "trait_type": "Level", "value": 91 },
+    { "trait_type": "Type-Weapon", "value": "MKSH1" }
+  ]
+}

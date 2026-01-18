@@ -1,0 +1,13 @@
+{
+  "name": "Fizer #26",
+  "description": "Moonees Genesis Collection. Fizer is a unique warrior from the YELLOWS tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/27.png",
+  "animation_url": "https://market.moonees.org/data/nfts/27.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "YELLOWS" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Yellow" },
+    { "trait_type": "Level", "value": 760 },
+    { "trait_type": "Type-Weapon", "value": "FIX01" }
+  ]
+}

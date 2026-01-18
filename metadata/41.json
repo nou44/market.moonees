@@ -1,0 +1,13 @@
+{
+  "name": "Cardi #41",
+  "description": "Moonees Genesis Collection. Cardi is a unique warrior from the PINKS tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/31.png",
+  "animation_url": "https://market.moonees.org/data/nfts/31.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "PINKS" },
+    { "trait_type": "Weapon", "value": "Swords" },
+    { "trait_type": "Color", "value": "Pink" },
+    { "trait_type": "Level", "value": 1000 },
+    { "trait_type": "Type-Weapon", "value": "SH67" }
+  ]
+}

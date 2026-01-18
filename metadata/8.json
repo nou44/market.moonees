@@ -1,0 +1,13 @@
+{
+  "name": "Yong #8",
+  "description": "Moonees Genesis Collection. Yong is a unique warrior from the YELLOWS tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/8.png",
+  "animation_url": "https://market.moonees.org/data/nfts/8.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "YELLOWS" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Yellow" },
+    { "trait_type": "Level", "value": 35 },
+    { "trait_type": "Type-Weapon", "value": "AW4" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Casa #35",
+  "description": "Moonees Genesis Collection. Casa is a unique warrior from the RONGS tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/29.png",
+  "animation_url": "https://market.moonees.org/data/nfts/29.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "RONGS" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Red" },
+    { "trait_type": "Level", "value": 1000 },
+    { "trait_type": "Type-Weapon", "value": "MP12" }
+  ]
+}

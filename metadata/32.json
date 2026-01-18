@@ -1,0 +1,13 @@
+{
+  "name": "Bloob #32",
+  "description": "Moonees Genesis Collection. Bloob is a unique warrior from the MOONS tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/51.png",
+  "animation_url": "https://market.moonees.org/data/nfts/51.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "MOONS" },
+    { "trait_type": "Weapon", "value": "Arms" },
+    { "trait_type": "Color", "value": "Gry" },
+    { "trait_type": "Level", "value": 901 },
+    { "trait_type": "Type-Weapon", "value": "PK66" }
+  ]
+}

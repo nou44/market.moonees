@@ -1,308 +1,302 @@
 [
   {
     "id": 1,
-    "name": "Greed-Arms DF50 #1",
-    "price": 200,
+    "name": "Greed DF50 #1",
+    "price": 40,
     "image": "data/nfts/1.png",
     "video": "data/nfts/1.mp4"
   },
   {
     "id": 2,
-    "name": "Grons-swords SH67 #2",
-    "price": 200,
+    "name": "Grons SH67 #2",
+    "price": 40,
     "image": "data/nfts/2.png",
     "video": "data/nfts/2.mp4"
   },
   {
     "id": 3,
-    "name": "Monor-swords H06 #3",
+    "name": "Monor H06 #3",
     "price": 223,
     "image": "data/nfts/3.png",
     "video": "data/nfts/3.mp4"
   },
   {
     "id": 4,
-    "name": "Yenso-Arms SE33 #4",
-    "price": 200,
+    "name": "Yenso SE33 #4",
+    "price": 40,
     "image": "data/nfts/4.png",
     "video": "data/nfts/4.mp4"
   },
   {
     "id": 5,
-    "name": "Miks-Swords SH67 5",
-    "price": 200,
+    "name": "Mixs SH67 5",
+    "price": 40,
     "image": "data/nfts/5.png",
     "video": "data/nfts/5.mp4"
   },
    {
     "id": 6,
-    "name": "Punoke-Arms AH12 #6",
+    "name": "Punoke AH12 #6",
     "price": 200,
     "image": "data/nfts/6.png",
     "video": "data/nfts/6.mp4"
   },
    {
     "id": 7,
-    "name": "Yelks-Arms MP77 #7",
+    "name": "Amanda MP77 #7",
     "price": 200,
     "image": "data/nfts/7.png",
     "video": "data/nfts/7.mp4"
   },
    {
     "id": 8,
-    "name": "Yong-Arms WE03 #8",
+    "name": "Yong WE03 #8",
     "price": 200,
     "image": "data/nfts/8.png",
     "video": "data/nfts/8.mp4"
   },
    {
     "id": 9,
-    "name": "Layes-swords SW02 #9",
+    "name": "Layes SW02 #9",
     "price": 200,
     "image": "data/nfts/9.png",
     "video": "data/nfts/9.mp4"
   },
    {
     "id": 10,
-    "name": "Punk-Arms DHH0 #10",
+    "name": "Punk DHH0 #10",
     "price": 220,
     "image": "data/nfts/15.png",
     "video": "data/nfts/15.mp4"
   },
    {
     "id": 11,
-    "name": "Payse-Arms FH33 #11",
+    "name": "Payse FH33 #11",
     "price": 220,
     "image": "data/nfts/11.png",
     "video": "data/nfts/11.mp4"
   },
    {
     "id": 12,
-    "name": "Pika-Arms MP100 #12",
+    "name": "Pika MP100 #12",
     "price": 220,
     "image": "data/nfts/12.png",
     "video": "data/nfts/12.mp4"
   },
    {
     "id": 13,
-    "name": "Regs-Swords 2MNT0 #13",
+    "name": "Regs 2MNT0 #13",
     "price": 220,
     "image": "data/nfts/13.png",
     "video": "data/nfts/13.mp4"
   },
    {
     "id": 14,
-    "name": "Oorga-Arms SW44 #14",
+    "name": "Oorga SW44 #14",
     "price": 220,
     "image": "data/nfts/22.png",
     "video": "data/nfts/22.mp4"
   },
    {
     "id": 15,
-    "name": "Lil-got-Arms AS01 #15",
+    "name": "Lilgot AS01 #15",
     "price": 200,
     "image": "data/nfts/23.png",
     "video": "data/nfts/23.mp4"
   },
    {
     "id": 16,
-    "name": "Ganet-Arms AS02 #16",
+    "name": "Ganet AS02 #16",
     "price": 220,
     "image": "data/nfts/24.png",
     "video": "data/nfts/24.mp4"
   },
    {
     "id": 17,
-    "name": "While-Arms SE20 #17",
+    "name": "While SE20 #17",
     "price": 220,
     "image": "data/nfts/25.png",
     "video": "data/nfts/25.mp4"
   },
    {
-    "id": 44,
-    "name": "Pinks-Arms Q001 #44",
+    "id": 18,
+    "name": "Pinks Q001 #44",
     "price": 220,
     "image": "data/nfts/16.png",
     "video": "data/nfts/16.mp4"
   },
    {
-    "id": 18,
-    "name": "Paulo-Arms 1200 #18",
+    "id": 19,
+    "name": "Paula 1200 #18",
     "price": 220,
     "image": "data/nfts/17.png",
     "video": "data/nfts/17.mp4"
   },
    {
-    "id": 19,
-    "name": "Neez-Swords S003 #19",
+    "id": 20,
+    "name": "Neez S003 #19",
     "price": 220,
     "image": "data/nfts/18.png",
     "video": "data/nfts/18.mp4"
   },
    {
-    "id": 20,
-    "name": "Keeps-Swords S004 #20",
+    "id": 21,
+    "name": "Keeps S004 #20",
     "price": 200,
     "image": "data/nfts/19.png",
     "video": "data/nfts/19.mp4"
   },
    {
-    "id": 21,
-    "name": "Rong-Swords S011 #21",
+    "id": 22,
+    "name": "Rong S011 #21",
     "price": 200,
     "image": "data/nfts/14.png",
     "video": "data/nfts/14.mp4"
   },
    {
-    "id": 22,
-    "name": "Block-Swords S22 #22",
+    "id": 23,
+    "name": "Block S22 #22",
     "price": 220,
     "image": "data/nfts/21.png",
     "video": "data/nfts/21.mp4"
   },
    {
-    "id": 23,
-    "name": "Milfa-Arms MP97 #23",
+    "id": 24,
+    "name": "Milfa MP97 #23",
     "price": 220,
     "image": "data/nfts/26.png",
     "video": "data/nfts/26.mp4"
   },
-  {
-    "id": 24,
-    "name": "Nick-Arms MP99 #24",
-    "price": 220,
-    "image": "data/nfts/23.png",
-    "video": "data/nfts/23.mp4"
-  },
+
     {
     "id": 25,
-    "name": "KHabe-Swords MQ07 #25",
+    "name": "Khabe MQ07 #25",
     "price": 220,
     "image": "data/nfts/32.png",
     "video": "data/nfts/32.mp4"
   },
     {
     "id": 26,
-    "name": "Fizer-Arms M007 #26",
+    "name": "Fizer M007 #26",
     "price": 220,
     "image": "data/nfts/27.png",
     "video": "data/nfts/27.mp4"
   },
     {
     "id": 27,
-    "name": "blans-Arms M007 #27",
+    "name": "blans M007 #27",
     "price": 220,
     "image": "data/nfts/40.png",
     "video": "data/nfts/40.mp4"
   },
     {
     "id": 28,
-    "name": "Mily-Arms Se07 #28",
+    "name": "Mily Se07 #28",
     "price": 220,
     "image": "data/nfts/33.png",
     "video": "data/nfts/33.mp4"
   },
     {
     "id": 29,
-    "name": "Hamble-Swords MS7 #29",
+    "name": "Hamble MS7 #29",
     "price": 220,
     "image": "data/nfts/38.png",
     "video": "data/nfts/38.mp4"
   },
    {
     "id": 30,
-    "name": "Criz-Arms MP97 #30",
+    "name": "Criz MP97 #30",
     "price": 220,
     "image": "data/nfts/53.png",
     "video": "data/nfts/53.mp4"
   },
    {
     "id": 31,
-    "name": "Law-Arms MP97 #31",
+    "name": "Laws MP97 #31",
     "price": 220,
     "image": "data/nfts/52.png",
     "video": "data/nfts/52.mp4"
   },
    {
     "id": 32,
-    "name": "Blop-Arms MP97 #32",
+    "name": "Blop MP97 #32",
     "price": 220,
     "image": "data/nfts/51.png",
     "video": "data/nfts/51.mp4"
   },
    {
     "id": 33,
-    "name": "Patch-Arms QW00 #33",
+    "name": "Patch QW00 #33",
     "price": 220,
     "image": "data/nfts/28.png",
     "video": "data/nfts/28.mp4"
   },
    {
     "id": 34,
-    "name": "Organet-Swoerds SV #34",
+    "name": "Oleeg SV55 #34",
     "price": 220,
     "image": "data/nfts/10.png",
     "video": "data/nfts/10.mp4"
   },
    {
     "id": 35,
-    "name": "Casa-Arms MP12 #35",
+    "name": "Casa MP19 #35",
     "price": 220,
     "image": "data/nfts/29.png",
     "video": "data/nfts/29.mp4"
   },
    {
     "id": 36,
-    "name": "Croze-Arms MP12 #36",
+    "name": "Croze NE012 #36",
     "price": 220,
     "image": "data/nfts/34.png",
     "video": "data/nfts/34.mp4"
   },
    {
     "id": 37,
-    "name": "Kayo-Arms MP12 #37",
+    "name": "Kayo MO12 #37",
     "price": 220,
     "image": "data/nfts/35.png",
     "video": "data/nfts/35.mp4"
   },
    {
     "id": 38,
-    "name": "Csawn-Arms MP12 #38",
+    "name": "Csawn AK77 #38",
     "price": 220,
     "image": "data/nfts/67.png",
     "video": "data/nfts/67.mp4"
   },
    {
     "id": 39,
-    "name": "Eisel-Arms MP12 #39",
+    "name": "Eisel SH00 #39",
     "price": 220,
     "image": "data/nfts/69.png",
     "video": "data/nfts/69.mp4"
   },
    {
     "id": 40,
-    "name": "Binan-Arms MP12 #40",
+    "name": "Binan MP77 #40",
     "price": 220,
     "image": "data/nfts/66.png",
     "video": "data/nfts/66.mp4"
   },
    {
     "id": 41,
-    "name": "Casa-Arms MP12 #41",
+    "name": "Cardi MQ02 #41",
     "price": 220,
     "image": "data/nfts/31.png",
     "video": "data/nfts/31.mp4"
   },
    {
     "id": 42,
-    "name": "Speed-Arms MP12 #42",
+    "name": "Speed SP00 #42",
     "price": 220,
     "image": "data/nfts/70.png",
     "video": "data/nfts/70.mp4"
   },
    {
     "id": 43,
-    "name": "Carli-Arms MP12 #43",
+    "name": "Carli FIREX #43",
     "price": 220,
     "image": "data/nfts/71.png",
     "video": "data/nfts/71.mp4"

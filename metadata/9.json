@@ -1,0 +1,13 @@
+{
+  "name": "Layes #9",
+  "description": "Moonees Genesis Collection. Layes is a unique warrior from the MOONS tribe, forged for battle in the Moonees universe.",
+  "image": "https://market.moonees.org/data/nfts/9.png",
+  "animation_url": "https://market.moonees.org/data/nfts/9.mp4",
+  "attributes": [
+    { "trait_type": "Tribe", "value": "MOONS" },
+    { "trait_type": "Weapon", "value": "Swords" },
+    { "trait_type": "Color", "value": "Gry" },
+    { "trait_type": "Level", "value": 514 },
+    { "trait_type": "Type-Weapon", "value": "KIN55" }
+  ]
+}
