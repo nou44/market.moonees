@@ -1,71 +1,41 @@
 const CONTRACT_ADDRESS = "0x971d1B0161f725810652a2c9FDc77Ba5118258A4";
 
 const ABI = [
-  "function mint() payable",
-  "function mintPrice() view returns (uint256)"
+  "function mint() payable"
 ];
 
-const grid = document.getElementById("marketGrid");
+document.getElementById("globalMintBtn").onclick = async () => {
+  try {
+    if (!window.ethereum) {
+      alert("Install a wallet like MetaMask");
+      return;
+    }
 
-fetch("data/nfts.json")
-  .then(res => res.json())
-  .then(nfts => {
-    nfts.forEach(nft => {
+    const provider = new ethers.BrowserProvider(window.ethereum);
+    await provider.send("eth_requestAccounts", []);
 
-      const card = document.createElement("div");
-      card.className = "nft-card";
+    const signer = await provider.getSigner();
+    const network = await provider.getNetwork();
 
-      card.innerHTML = `
-        <div class="media-box">
-          <img src="${nft.image}">
-          <video src="${nft.video}" muted loop playsinline></video>
-          <button class="mint-btn">Mint</button>
-        </div>
-        <div class="nft-info">
-          <h3>${nft.name}</h3>
-          <span>${nft.price} POL</span>
-        </div>
-      `;
+    if (network.chainId !== 137n) {
+      alert("Switch to Polygon Mainnet");
+      return;
+    }
 
-      const video = card.querySelector("video");
-      const mintBtn = card.querySelector(".mint-btn");
+    const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
 
-      card.onmouseenter = () => video.play();
-      card.onmouseleave = () => video.pause();
+    const price = await contract.mintPrice();
 
-      mintBtn.onclick = async () => {
-        try {
-          if (!window.ethereum) {
-            alert("Wallet not found");
-            return;
-          }
+    const tx = await contract.mint({ value: price });
+    await tx.wait();
 
-          const provider = new ethers.providers.Web3Provider(window.ethereum);
-          await provider.send("eth_requestAccounts", []);
-          const signer = provider.getSigner();
-          const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
+    alert("Mint Success ✅");
 
-          const price = await contract.mintPrice();
-
-          mintBtn.innerText = "Minting...";
-          mintBtn.disabled = true;
-
-          const tx = await contract.mint({ value: price });
-          await tx.wait();
-
-          mintBtn.innerText = "Minted ✅";
-
-        } catch (e) {
-          console.log(e);
-          mintBtn.innerText = "Mint";
-          mintBtn.disabled = false;
-          alert("Mint failed");
-        }
-      };
-
-      grid.appendChild(card);
-    });
-  });
+  } catch (err) {
+    console.error(err);
+    alert("Mint Failed");
+  }
+};
 
 
 
