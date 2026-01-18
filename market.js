@@ -1,7 +1,7 @@
 console.log("Market JS Loaded");
 
 // ================= CONFIG =================
-const CONTRACT_ADDRESS = "0x8164214b395b68Bc2BAe5F38728E7c790066E7b8";
+const CONTRACT_ADDRESS = "0x971d1B0161f725810652a2c9FDc77Ba5118258A4";
 
 const ABI = [
   "function mint() payable",
