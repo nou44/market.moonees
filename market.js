@@ -1,13 +1,23 @@
-
-
 console.log("Market JS Loaded");
 
-const CONTRACT_ADDRESS = "0x971d1B0161f725810652a2c9FDc77Ba5118258A4";
+const CONTRACT_ADDRESS = "0x6384B134C31d90043EcAB76266DBfF912F178F13";
 
 const ABI = [
-  "function mint() payable",
-  "function mintPrice() view returns(uint256)"
+  "function mint(uint256 amount) payable",
+  "function price() view returns(uint256)"
 ];
+
+const POLYGON_CHAIN = {
+  chainId: "0x89",
+  chainName: "Polygon Mainnet",
+  nativeCurrency: {
+    name: "POL",
+    symbol: "POL",
+    decimals: 18
+  },
+  rpcUrls: ["https://polygon-rpc.com"],
+  blockExplorerUrls: ["https://polygonscan.com"]
+};
 
 const grid = document.getElementById("marketGrid");
 
@@ -27,7 +37,7 @@ fetch("data/nfts.json")
         <div class="nft-info">
           <h3>${nft.name}</h3>
           <span>Price: ${nft.price} POL</span>
-          <button class="mint-btn" data-id="${nft.id}">Mint</button>
+          <button class="mint-btn">Mint</button>
         </div>
       `;
 
@@ -37,41 +47,56 @@ fetch("data/nfts.json")
       card.addEventListener("mouseleave", () => video.pause());
 
       const mintBtn = card.querySelector(".mint-btn");
-mintBtn.onclick = async () => {
-  try {
-    if (typeof window.ethereum === "undefined") {
-      alert("Open site in wallet browser ل MetaMask / Trust / OKX");
-      window.open("https://metamask.app.link/dapp/market.moonees.org", "_blank");
-      return;
-    }
 
-    await window.ethereum.request({ method: "eth_requestAccounts" });
+      mintBtn.onclick = async () => {
+        try {
+          if (!window.ethereum) {
+            alert("Open site in wallet browser MetaMask / Trust / OKX");
+            return;
+          }
 
-    const provider = new ethers.BrowserProvider(window.ethereum);
-    const signer = await provider.getSigner();
-    const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
+          await ethereum.request({ method: "eth_requestAccounts" });
 
-    const price = await contract.mintPrice();
+          // switch polygon
+          try {
+            await ethereum.request({
+              method: "wallet_switchEthereumChain",
+              params: [{ chainId: "0x89" }]
+            });
+          } catch {
+            await ethereum.request({
+              method: "wallet_addEthereumChain",
+              params: [POLYGON_CHAIN]
+            });
+          }
 
-    mintBtn.innerText = "Minting...";
-    mintBtn.disabled = true;
+          const provider = new ethers.BrowserProvider(window.ethereum);
+          const signer = await provider.getSigner();
+          const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
 
-    const tx = await contract.mint({ value: price });
-    await tx.wait();
+          const price = await contract.price();
 
-    mintBtn.innerText = "Minted ✅";
-  } catch (err) {
-    console.error(err);
-    alert(err.reason || err.message || "Mint failed");
-    mintBtn.innerText = "Mint";
-    mintBtn.disabled = false;
-  }
-};
+          mintBtn.innerText = "Minting...";
+          mintBtn.disabled = true;
+
+          const tx = await contract.mint(1, { value: price });
+          await tx.wait();
+
+          mintBtn.innerText = "Minted ✅";
+
+        } catch (err) {
+          console.error(err);
+          alert(err?.reason || err?.message || "Mint failed");
+          mintBtn.innerText = "Mint";
+          mintBtn.disabled = false;
+        }
+      };
 
       grid.appendChild(card);
     });
   })
   .catch(err => console.error(err));
+
 
 const scene = new THREE.Scene();
 
