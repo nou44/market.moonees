@@ -1,23 +1,4 @@
-console.log("Market JS Loaded");
-
-const CONTRACT_ADDRESS = "0x6384B134C31d90043EcAB76266DBfF912F178F13";
-
-const ABI = [
-  "function mint(uint256 amount) payable",
-  "function price() view returns(uint256)"
-];
-
-const POLYGON_CHAIN = {
-  chainId: "0x89",
-  chainName: "Polygon Mainnet",
-  nativeCurrency: {
-    name: "POL",
-    symbol: "POL",
-    decimals: 18
-  },
-  rpcUrls: ["https://polygon-rpc.com"],
-  blockExplorerUrls: ["https://polygonscan.com"]
-};
+console.log("Market JS Loaded (UI Only)");
 
 const grid = document.getElementById("marketGrid");
 
@@ -31,71 +12,31 @@ fetch("data/nfts.json")
 
       card.innerHTML = `
         <div class="media-box">
-          <img src="${nft.image}">
+          <img src="${nft.image}" alt="${nft.name}">
           <video src="${nft.video}" muted loop playsinline></video>
         </div>
         <div class="nft-info">
           <h3>${nft.name}</h3>
-          <span>Price: ${nft.price} POL</span>
-          <button class="mint-btn">Mint</button>
+          <span>${nft.price} POL</span>
         </div>
       `;
 
       const video = card.querySelector("video");
 
-      card.addEventListener("mouseenter", () => video.play());
-      card.addEventListener("mouseleave", () => video.pause());
+      card.addEventListener("mouseenter", () => {
+        video.currentTime = 0;
+        video.play();
+      });
 
-      const mintBtn = card.querySelector(".mint-btn");
-
-      mintBtn.onclick = async () => {
-        try {
-          if (!window.ethereum) {
-            alert("Open site in wallet browser MetaMask / Trust / OKX");
-            return;
-          }
-
-          await ethereum.request({ method: "eth_requestAccounts" });
-
-          // switch polygon
-          try {
-            await ethereum.request({
-              method: "wallet_switchEthereumChain",
-              params: [{ chainId: "0x89" }]
-            });
-          } catch {
-            await ethereum.request({
-              method: "wallet_addEthereumChain",
-              params: [POLYGON_CHAIN]
-            });
-          }
-
-          const provider = new ethers.BrowserProvider(window.ethereum);
-          const signer = await provider.getSigner();
-          const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
-
-          const price = await contract.price();
-
-          mintBtn.innerText = "Minting...";
-          mintBtn.disabled = true;
-
-          const tx = await contract.mint(1, { value: price });
-          await tx.wait();
-
-          mintBtn.innerText = "Minted ✅";
-
-        } catch (err) {
-          console.error(err);
-          alert(err?.reason || err?.message || "Mint failed");
-          mintBtn.innerText = "Mint";
-          mintBtn.disabled = false;
-        }
-      };
+      card.addEventListener("mouseleave", () => {
+        video.pause();
+      });
 
       grid.appendChild(card);
     });
   })
   .catch(err => console.error(err));
+
 
 
 const scene = new THREE.Scene();

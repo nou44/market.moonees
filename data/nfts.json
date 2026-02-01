@@ -2,14 +2,14 @@
   {
     "id": 1,
     "name": "Greed DF50 #1",
-    "price": 40,
+    "price": 10,
     "image": "data/nfts/1.png",
     "video": "data/nfts/1.mp4"
   },
   {
     "id": 2,
     "name": "Grons SH67 #2",
-    "price": 40,
+    "price": 10,
     "image": "data/nfts/2.png",
     "video": "data/nfts/2.mp4"
   },
